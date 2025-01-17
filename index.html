@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clarisse Paiva Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
         * {
@@ -13,7 +14,7 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Satoshi', sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #fff;
@@ -88,13 +89,40 @@
             color: #e67e22;
         }
 
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 1100px;
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .hero-section h1 {
+            font-size: 45px;
+            max-width: 60%;
+        }
+
+        .hero-section span {
+            font-style: italic;
+        }
+
+        .hero-section img {
+            max-width: 35%;
+            border-top-left-radius: 50% 90%;  /* More rounded left side */
+            border-bottom-left-radius: 50% 90%;
+            border-top-right-radius: 50% 90%; /* More rounded right side */
+            border-bottom-right-radius: 50% 90%;
+        }
+
         .bottom-section {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: row;
             gap: 30px;
-            padding: 50px 20px;
+            padding: 50px 0px;
             margin: 50px auto; /* Centers the section horizontally */
             max-width: 1100px; /* Ensures it doesn't stretch too wide */
         }
@@ -106,7 +134,7 @@
         }
 
         .bottom-section .text-content {
-            max-width: 1300px;
+            max-width: 1100px;
             text-align: left;
             font-size: 16px;
             line-height: 1.8;
@@ -133,10 +161,24 @@
                 justify-content: center;
             }
 
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-section h1 {
+                max-width: 100%;
+            }
+
+            .hero-section img {
+                max-width: 50%;
+                margin-top: 20px;
+            }
+
             .bottom-section {
                 flex-direction: column;
                 text-align: center;
-                gap: 60px;
+                gap: 20px;
             }
 
             .bottom-section .text-content {
@@ -162,14 +204,16 @@
         </div>
     </header>
 
+    <section class="hero-section">
+        <h1>CRIANDO JORNADAS <span>DIGITAIS</span> COM PROPÓSITO E ELEGÂNCIA</h1>
+        <img src="home-1.png" alt="Mockup de laptop mostrando design digital">
+    </section>
+
     <section class="bottom-section">
         <img src="LOGO COM INICIAIS.png" alt="Clarisse Paiva Logo" class="logo-image">
         <div class="text-content">
-            <p>Clarisse Paiva é uma designer de produtos digitais com MBA em Design de Interação, especializada em criar experiências excepcionais por meio do UI/UX design e do desenvolvimento fluido de sites e aplicativos. </p>
-
-            <p>Apaixonada por conectar pessoas e marcas, sua trajetória inclui projetos como freelancer e a experiência de trabalhar em uma empresa americana, onde desenvolveu soluções criativas e funcionais para clientes variados.</p>
-            
-            <p>Combinando design estratégico, atenção aos detalhes e um foco constante no usuário, Clarisse transforma ideias em experiências impactantes que aliam criatividade e funcionalidade. Para maiores detalhes sobre os projetos realizados, confira os destaques na seção abaixo. </p>
+            <p>Clarisse Paiva é uma designer de produtos digitais, especializada em criar experiências excepcionais por meio do UI/UX design e desenvolvimento fluido de sites e aplicativos.</p>
+            <p>Transformamos ideias em realidade com foco em criatividade, funcionalidade e design centrado no usuário.</p>
         </div>
     </section>
 </body>
