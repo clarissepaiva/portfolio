@@ -1,17 +1,4 @@
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Satoshi', sans-serif;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-  }
-  
   /* Section */
   .cv-section {
     display: flex;
