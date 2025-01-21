@@ -1,204 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clarisse Paiva Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="project_section.css">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Satoshi', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            margin: 0;
-        }
-
-        header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 32px;
-            gap: 154px;
-
-
-            position: relative;
-            max-width: 1300px;
-            height: 88px;
-            margin: 100px auto; /* Centers the header horizontally */
-
-            background: #FFFFFF;
-            box-shadow: 1px 1px 4px rgba(232, 154, 163, 0.5);
-            border-radius: 99px;
-
-            flex: none;
-            order: 2;
-            flex-grow: 0;
-            z-index: 2;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-        }
-
-        nav {
-            font-family: 'Satoshi', sans-serif;
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #e67e22;
-        }
-
-        .language-switcher {
-            display: flex;
-            gap: 15px;
-            font-size: 14px;
-        }
-
-        .language-switcher a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        .language-switcher a:hover {
-            color: #e67e22;
-        }
-
-        .hero-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 50px auto;
-            max-width: 1300px;
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
-
-        .hero-section h1 {
-            font-size: 42px;
-            max-width: 60%;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 48px;
-            line-height: 65px;
-            text-transform: uppercase;
-        }
-
-        .hero-section span {
-            font-style: italic;
-        }/* Criando jornadas digitais com propósito e elegância */
-
-        .hero-section img {
-            max-width: 30%;
-            border-top-left-radius: 50% 90%;  /* More rounded left side */
-            border-bottom-left-radius: 50% 90%;
-            border-top-right-radius: 50% 90%; /* More rounded right side */
-            border-bottom-right-radius: 50% 90%;
-        }
-
-        .bottom-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 30px;
-            padding: 50px 0px;
-            margin: 50px auto; /* Centers the section horizontally */
-            max-width: 1300px; /* Ensures it doesn't stretch too wide */
-        }
-
-        .bottom-section .logo-image {
-            height: 350px;
-            width: 350px;
-            border-radius: 50%;
-        }
-
-        .bottom-section .text-content {
-            max-width: 1300px;
-            text-align: left;
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .bottom-section .text-content p {
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            header {
-                flex-direction: column;
-                gap: 10px;
-                position: static;
-                width: auto;
-                height: auto;
-                padding: 20px;
-                border-radius: 20px;
-            }
-
-            .language-switcher {
-                justify-content: center;
-            }
-
-            .hero-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-section h1 {
-                max-width: 100%;
-            }
-
-            .hero-section img {
-                max-width: 50%;
-                margin-top: 20px;
-            }
-
-            .bottom-section {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-
-            .bottom-section .text-content {
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="cv_section.css">
+    <link rel="stylesheet" href="cta_section.css">
+    <link rel="stylesheet" href="footer_section.css">
+    <link rel="stylesheet" href="header_section.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -224,73 +38,188 @@
     <section class="bottom-section">
         <img src="images\LOGO COM INICIAIS.png" alt="Clarisse Paiva Logo" class="logo-image">
         <div class="text-content">
-            <p>Clarisse Paiva é uma designer de produtos digitais com MBA em Design de Interação, especializada em criar experiências excepcionais por meio do UI/UX design e do desenvolvimento fluido de sites e aplicativos.</p>
+            <p>Clarisse Paiva é uma designer de produtos digitais com MBA em Design de Interação, especializada em criar
+                experiências excepcionais por meio do UI/UX design e do desenvolvimento fluido de sites e aplicativos.
+            </p>
 
-            <p>Apaixonada por conectar pessoas e marcas, sua trajetória inclui projetos como freelancer e a experiência de trabalhar em uma empresa americana, onde desenvolveu soluções criativas e funcionais para clientes variados.</p>
-            
-            <p>Combinando design estratégico, atenção aos detalhes e um foco constante no usuário, Clarisse transforma ideias em experiências impactantes que aliam criatividade e funcionalidade. Para maiores detalhes sobre os projetos realizados, confira os destaques na seção abaixo.</p>
+            <p>Apaixonada por conectar pessoas e marcas, sua trajetória inclui projetos como freelancer e a experiência
+                de trabalhar em uma empresa americana, onde desenvolveu soluções criativas e funcionais para clientes
+                variados.</p>
+
+            <p>Combinando design estratégico, atenção aos detalhes e um foco constante no usuário, Clarisse transforma
+                ideias em experiências impactantes que aliam criatividade e funcionalidade. Para maiores detalhes sobre
+                os projetos realizados, confira os destaques na seção abaixo.</p>
         </div>
     </section>
+
+
     <!-- PROJECTS -->
     <div class="projects">
         <div class="appearing-text">
-          <h1>Projetos em Destaque</h1>
+            <h1>Projetos em Destaque</h1>
         </div>
         <div class="cards">
-          <div class="column">
-            <div class="card-project">
-              <div class="project-image" style="background-image: url('images/home-1.png');"></div>
-              <div class="text">
-                <h2 class="title">Design para um Festival Inesquecível</h2>
-                <p class="description">UI/UX Design</p>
-              </div>
+            <div class="column">
+                <div class="card-project">
+                    <div class="project-image" style="background-image: url('images/home-1.png');"></div>
+                    <div class="text">
+                        <h2 class="title">Design para um Festival Inesquecível</h2>
+                        <p class="description">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <div class="project-image" style="background-image: url('images/home-2.png');"></div>
+                    <div class="text">
+                        <h2 class="title">Transformando Habilidades em Experiências Visuais</h2>
+                        <p class="description">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <div class="project-image" style="background-image: url('images/home-3.png');"></div>
+                    <div class="text">
+                        <h2 class="title">Design System: Consistência e Eficiência</h2>
+                        <p class="description">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <div class="project-image" style="background-image: url('images/home-4.png');"></div>
+                    <div class="text">
+                        <h2 class="title">Anúncios que Conectam Negócios e Clientes</h2>
+                        <p class="description">Anúncios</p>
+                    </div>
+                </div>
             </div>
-            <div class="card-project">
-              <div class="project-image" style="background-image: url('images/home-2.png');"></div>
-              <div class="text">
-                <h2 class="title">Transformando Habilidades em Experiências Visuais</h2>
-                <p class="description">UI/UX Design</p>
-              </div>
+            <div class="column">
+                <div class="card-project">
+                    <div class="project-image" style="background-image: url('images/home-5.png');"></div>
+                    <div class="text">
+                        <h2 class="title">Praticidade e Saúde na Palma da Sua Mão</h2>
+                        <p class="description">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <div class="project-image" style="background-image: url('images/home-6.png');"></div>
+                    <div class="text">
+                        <h2 class="title">Templates Design Versátil para Websites Modernos</h2>
+                        <p class="description">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <div class="project-image" style="background-image: url('images/home-7.png');"></div>
+                    <div class="text">
+                        <h2 class="title">Empoderando Pequenos Empresários</h2>
+                        <p class="description">UI/UX Design</p>
+                    </div>
+                </div>
             </div>
-            <div class="card-project">
-              <div class="project-image" style="background-image: url('images/home-3.png');"></div>
-              <div class="text">
-                <h2 class="title">Design System: Consistência e Eficiência</h2>
-                <p class="description">UI/UX Design</p>
-              </div>
-            </div>
-            <div class="card-project">
-              <div class="project-image" style="background-image: url('images/home-4.png');"></div>
-              <div class="text">
-                <h2 class="title">Anúncios que Conectam Negócios e Clientes</h2>
-                <p class="description">Anúncios</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card-project">
-              <div class="project-image" style="background-image: url('images/home-5.png');"></div>
-              <div class="text">
-                <h2 class="title">Praticidade e Saúde na Palma da Sua Mão</h2>
-                <p class="description">UI/UX Design</p>
-              </div>
-            </div>
-            <div class="card-project">
-              <div class="project-image" style="background-image: url('images/home-6.png');"></div>
-              <div class="text">
-                <h2 class="title">Templates Design Versátil para Websites Modernos</h2>
-                <p class="description">UI/UX Design</p>
-              </div>
-            </div>
-            <div class="card-project">
-              <div class="project-image" style="background-image: url('images/home-7.png');"></div>
-              <div class="text">
-                <h2 class="title">Empoderando Pequenos Empresários</h2>
-                <p class="description">UI/UX Design</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+
+    <!-- CV SECTION -->
+    <section class="cv-section">
+        <div class="cv">
+            <div class="cv-content">
+                <div class="cv-text">
+                    <div class="curriculum">CURRICULUM</div>
+                    <h3>Minha Jornada Profissional: Experiência, Habilidades e dedicação pelo Design</h3>
+                    <p>
+                        Explore minha trajetória profissional, destacando experiências enriquecedoras,
+                        habilidades técnicas e criativas, e minha dedicação em transformar ideias em
+                        soluções visuais impactantes no universo do design UI/UX.
+                    </p>
+                </div>
+                <div class="icons">
+                    <div class="vector">
+                        <svg width="128" height="59" viewBox="0 0 128 59" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M99 4.9707L124 29.9707M124 29.9707L99 54.9707M124 29.9707H4" stroke="#383838"
+                                stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="cta-text">
+                <h3>PRONTO PARA TRANSFORMAR IDEIAS EM REALIDADE?</h3>
+                <p>
+                    Converse sobre seu projeto e descubra como podemos transformar suas ideias em
+                    experiências memoráveis.
+                </p>
+            </div>
+            <div class="cta-contato">
+                <div class="cta-contact-header">ENTRE EM CONTATO</div>
+                <div class="cta-links">
+                    <div class="cta-linkedin">
+                        <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                            <img src="images/linkedin.svg" alt="LinkedIn" class="cta-icon" />
+                        </a>
+                    </div>
+                    <!-- Email Icon -->
+                    <div class="cta-email">
+                        <a href="mailto:your-email@example.com" target="_blank">
+                            <img src="images/email.svg" alt="Email" class="cta-icon" />
+                        </a>
+                    </div>
+                    <!-- WhatsApp Icon -->
+                    <div class="cta-whatsapp">
+                        <a href="https://wa.me/1234567890" target="_blank">
+                            <img src="images/wpp.svg" alt="WhatsApp" class="cta-icon" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER  -->
+    <section class="footer-section">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-header">
+                        <div class="footer-logo">
+                            <!-- Replace with actual logo or initials -->
+                            <img src="images\LOGO COM INICIAIS.png" alt="Logo Clarisse Paiva" class="footer-logo-image">
+                        </div>
+                        <div class="footer-name">CLARISSE PAIVA</div>
+                    </div>
+                    <p class="footer-description">
+                        Uma UX/UI Designer qualificada, apaixonada por criar experiências centradas no usuário que
+                        conectam
+                        design, tecnologia e estratégia.
+                    </p>
+                </div>
+                <div class="footer-contact">
+                    <div class="footer-contact-header">ENTRE EM CONTATO</div>
+                    <div class="footer-links">
+                        <!-- LinkedIn Icon -->
+                        <div class="footer-linkedin">
+                            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                                <img src="images/linkedin.svg" alt="LinkedIn" class="footer-icon" />
+                            </a>
+                        </div>
+                        <!-- Email Icon -->
+                        <div class="footer-email">
+                            <a href="mailto:your-email@example.com" target="_blank">
+                                <img src="images/email.svg" alt="Email" class="footer-icon" />
+                            </a>
+                        </div>
+                        <!-- WhatsApp Icon -->
+                        <div class="footer-whatsapp">
+                            <a href="https://wa.me/1234567890" target="_blank">
+                                <img src="images/wpp.svg" alt="WhatsApp" class="footer-icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </section>
 </body>
+
 </html>

@@ -1,0 +1,187 @@
+/* CTA Section */
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px;
+    width: 100%;
+    height: auto;
+    background: #E07C88;
+    border-radius: 48px 48px 0px 0px;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px;
+    gap: 92px;
+    width: 100%;
+    max-width: 1213px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 16px;
+    max-width: 774px;
+}
+
+.cta-text h3 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 51px;
+    text-transform: uppercase;
+    color: #383838;
+}
+
+.cta-text p {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #383838;
+}
+
+.cta-contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 12px;
+    width: 244px;
+    height: 135px;
+    background: #FBFBFB;
+    border-radius: 40px;
+}
+
+.cta-contact-header {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #383838;
+    text-align: center;
+}
+
+.cta-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.cta-linkedin,
+.cta-email,
+.cta-whatsapp {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Horizontal centering */
+    align-items: center;
+    /* Vertical centering */
+    background: #E07C88;
+    /* Circle background color */
+    border-radius: 999px;
+    /* Ensure the button stays circular */
+}
+
+.cta-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    /* Ensures proper scaling of the icon */
+    display: block;
+    /* Ensure the image behaves as a block element */
+}
+
+/* Add hover effect for icons */
+.cta-linkedin:hover,
+.cta-email:hover,
+.cta-whatsapp:hover {
+    background: #D55C6D;
+    /* Slightly darker shade for hover effect */
+}
+
+.cta-icon:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 50px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px;
+    }
+
+    .cta-text h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .cta-text p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cta-contato {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 30px;
+    }
+
+    .cta-text h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .cta-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cta-contato {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .cta-links {
+        gap: 8px;
+    }
+
+    .cta-linkedin,
+    .cta-email,
+    .cta-whatsapp {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cta-vector {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    gap: 154px;
+
+
+    position: relative;
+    max-width: 1300px;
+    height: 88px;
+    margin: 100px auto;
+    /* Centers the header horizontally */
+
+    background: #FFFFFF;
+    box-shadow: 1px 1px 4px rgba(232, 154, 163, 0.5);
+    border-radius: 99px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+nav {
+    font-family: 'Satoshi', sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e67e22;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.language-switcher a:hover {
+    color: #e67e22;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 1300px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.hero-section h1 {
+    font-size: 42px;
+    max-width: 60%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+
+.hero-section span {
+    font-style: italic;
+}
+
+/* Criando jornadas digitais com propósito e elegância */
+
+.hero-section img {
+    max-width: 30%;
+    border-top-left-radius: 50% 90%;
+    /* More rounded left side */
+    border-bottom-left-radius: 50% 90%;
+    border-top-right-radius: 50% 90%;
+    /* More rounded right side */
+    border-bottom-right-radius: 50% 90%;
+
+    animation: changeImage 4s steps(4) infinite;
+    /* 4 steps for 4 images, changes every 1 second */
+}
+
+@keyframes changeImage {
+    0% {
+        content: url("images/home-1.png");
+    }
+
+    25% {
+        content: url("images/home-2.png");
+    }
+
+    50% {
+        content: url("images/home-3.png");
+    }
+
+    75% {
+        content: url("images/home-4.png");
+    }
+
+    100% {
+        content: url("images/home-1.png");
+    }
+
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    padding: 50px 0px;
+    margin: 50px auto;
+    /* Centers the section horizontally */
+    max-width: 1300px;
+    /* Ensures it doesn't stretch too wide */
+}
+
+.bottom-section .logo-image {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.bottom-section .text-content {
+    max-width: 1300px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.bottom-section .text-content p {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .language-switcher {
+        justify-content: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        max-width: 100%;
+    }
+
+    .hero-section img {
+        max-width: 50%;
+        margin-top: 20px;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .bottom-section .text-content {
+        text-align: center;
+    }
+}
