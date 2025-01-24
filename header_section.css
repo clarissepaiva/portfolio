@@ -164,7 +164,7 @@ img.animate-up {
     position: relative;
     opacity: 0;
     transform: translateY(50px);
-    animation: slideUp 2s ease-out forwards;
+    animation: slideUp 1s ease-out forwards;
 }
 
 .hero-section img {
@@ -177,11 +177,29 @@ img.animate-up {
     border-bottom-right-radius: 50% 90%;
     width: 352px;
     height: 240px;
-    animation: fadeIn 2s ease-out forwards, changeImage 5s steps(5) infinite;
+    animation: fadeInDelay 1.5s ease-in-out forwards, changeImage 5s steps(5) infinite;
     /* 4 steps for 4 images, changes every 1 second */
 }
 
 /* Keyframes for the slide-up effect */
+@keyframes fadeInDelay {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes slideUp {
     0% {
         opacity: 0;
