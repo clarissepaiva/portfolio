@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 48px;
+  padding: 0px 100px;
   /* Added padding for sides */
   width: 100%;
   /* Full width */
@@ -26,14 +26,14 @@
   /* Align text to the left */
   padding: 0 48px;
   /* Add horizontal padding for spacing */
-  margin-top: 200px;
-  margin-bottom: 150px;
+  margin-top: 100px;
+  margin-bottom: 48px;
   /* Create space below the title */
 }
 
 .appearing-text h1 {
   font-family: 'Satoshi', sans-serif;
-  font-style: italic;
+  font-style: normal;
   /* Italicize "PROJETOS" */
   font-weight: 400;
   /* Use a light weight for emphasis */
@@ -49,16 +49,21 @@
   /* Remove any default margins */
 }
 
+.appearing-text h1 span {
+  font-style: italic;
+  font-weight: 200;
+}
+
 
 /* cards */
 .cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   padding: 0px;
   width: 1240px;
-  gap: 48px;
+  /* gap: 48px; */
 }
 
 /* column */
@@ -78,10 +83,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   padding: 24px;
   gap: 16px;
-  width: 567px;
+  width: 528px;
   height: auto;
   background: #1D1E22;
   border-radius: 16px;
@@ -101,16 +106,11 @@
   background: #8434AF;
   /* Placeholder for image */
   border-radius: 8px;
+  background-size: cover;
 }
 
 .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  padding: 0px 8px;
-  gap: 4px;
-  width: 480px;
+  align-items: flex-start;
 }
 
 .text .title {
@@ -148,30 +148,52 @@
 }
 
 @media (max-width: 768px) {
+  .projects {
+    padding: 0px 24px;
+  }
+
   .cards {
     gap: 16px;
     /* Reduce gap between cards */
+    width: 360px;
   }
 
   .card-project {
     padding: 16px;
     /* Reduce padding for smaller cards */
-  }
-}
-
-@media (max-width: 480px) {
-  .cards {
-    gap: 12px;
-    /* Further reduce gap between cards */
-  }
-
-  .card-project {
-    padding: 12px;
-    /* Minimal padding for small screens */
+    width: 360px;
   }
 
   .project-image {
-    height: 200px;
-    /* Set a fixed height for small images */
+    width: 320px;
+    height: 220px;
+    background: #8434AF;
+    /* Placeholder for image */
+    border-radius: 8px;
+    background-size: cover;
+  }
+
+  .text {
+    padding: 0px 8px;
+    gap: 4px;
+    width: 312px;
+  }
+
+  .appearing-text {
+    width: 100%;
+    /* Ensure it stretches across the section */
+    text-align: left;
+    /* Align text to the left */
+    padding: 0 0px;
+    /* Add horizontal padding for spacing */
+    margin-top: 100px;
+    margin-bottom: 48px;
+    /* Create space below the title */
+  }
+
+
+  .column:nth-child(2) {
+    margin-top: 0px;
+    /* Add spacing for alternation in the second column */
   }
 }

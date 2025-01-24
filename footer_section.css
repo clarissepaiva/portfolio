@@ -26,6 +26,7 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    align-items: flex-start;
   }
   
   /* Footer Info */
@@ -81,10 +82,11 @@
   
   /* Footer Contact */
   .footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    display: flex; /* Set container to flex */
+    flex-direction: row; /* Align content horizontally */
+    align-items: center; /* Vertically center items */
+    gap: 16px; /* Space between "ENTRE EM CONTATO" and the links */
+    margin-top: auto;
   }
   
   .footer-contact-header {
@@ -111,6 +113,21 @@
     align-items: center; /* Vertical centering */
     background: #E07C88; /* Circle background color */
     border-radius: 999px; /* Ensure the button stays circular */
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+
+  .footer-linkedin:hover,
+  .footer-email:hover,
+  .footer-whatsapp:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 5px 10px rgba(0, 0, 0, 0.3); /* Adds inset shadow for "pressed" effect */
+    transform: translateY(2px); /* Simulates downward movement */
+  }
+
+  .footer-linkedin:active,
+  .footer-email:active,
+  .footer-whatsapp:active {
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4); /* Stronger inset shadow when clicked */
+    transform: translateY(4px); /* Moves further down on active click */
   }
   
   .footer-icon {
@@ -120,44 +137,25 @@
     display: block; /* Ensure the image behaves as a block element */
   }
   
-  /* Add hover effect for icons */
-  .footer-linkedin:hover, .footer-email:hover, .footer-whatsapp:hover {
-    background: #D55C6D; /* Slightly darker shade for hover effect */
-  }
-  
-  .footer-icon:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     .footer {
       flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
+      align-items: left;
+      padding: 56px 24px;
+      height: 414px;
     }
-  
+
     .footer-content {
       flex-direction: column;
       gap: 32px;
-      text-align: center;
+      text-align: left;
+      align-items: left;
     }
   
     .footer-info {
-      align-items: center;
+      align-items: left;
     }
-  
-    .footer-contact {
-      align-items: center;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .footer {
-      padding: 20px;
-    }
-  
+
     .footer-logo {
       width: 48px;
       height: 48px;
@@ -167,13 +165,22 @@
       font-size: 24px;
     }
   
+    .footer-contact {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .footer-name {
       font-size: 20px;
     }
-  
+    
+    .footer-links {
+      align-items: left;
+    }
+
     .footer-description {
-      font-size: 16px;
-      line-height: 22px;
+      font-size: 18px;
+      line-height: 24px;
     }
   
     .footer-linkedin, .footer-email, .footer-whatsapp {

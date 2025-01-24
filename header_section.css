@@ -1,4 +1,9 @@
 /* General Reset */
+@font-face {
+    font-family: 'Satoshi'; /* The name you want to use in your CSS */
+    src: url('fonts/custom-font.otf') format('opentype'); /* Path to the font */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,32 +20,24 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 24px 32px;
-    gap: 154px;
-
-
-    position: relative;
     max-width: 1300px;
-    height: 88px;
-    margin: 100px auto;
-    /* Centers the header horizontally */
-
+    margin: 0 auto; /* Centers the header */
     background: #FFFFFF;
     box-shadow: 1px 1px 4px rgba(232, 154, 163, 0.5);
     border-radius: 99px;
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
     z-index: 2;
+    margin-top: 100px; 
 }
 
+/* Logo on the left */
 .logo {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    flex: 1;
 }
 
 .logo img {
@@ -49,11 +46,13 @@ header {
     border-radius: 50%;
 }
 
+/* Navigation in the center */
 nav {
-    font-family: 'Satoshi', sans-serif;
     display: flex;
-    flex-direction: row;
+    flex: 2;
+    justify-content: center;
     gap: 30px;
+    font-family: 'Satoshi', sans-serif;
     font-size: 16px;
     font-weight: 500;
 }
@@ -62,26 +61,64 @@ nav a {
     text-decoration: none;
     color: #333;
     transition: color 0.3s;
+    position: relative;
 }
 
-nav a:hover {
-    color: #e67e22;
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the distance of the line from the text */
+    width: 100%; /* The line always spans the full width */
+    height: 2px;
+    background-color: rgba(232, 154, 163, 1); /* Set the desired color */
+    opacity: 0; /* Initially fully transparent */
+    transition: opacity 0.5s ease;
 }
 
+nav a:hover::after {
+    opacity: 1; /* Make the line visible on hover */
+}
+
+/* Language switcher on the right */
 .language-switcher {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
     gap: 15px;
     font-size: 14px;
 }
 
-.language-switcher a {
+.language-switcher button {
     text-decoration: none;
     color: #333;
     transition: color 0.3s;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    padding: 5px 0px 5px;
+    margin: 0 5px;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
 }
 
-.language-switcher a:hover {
-    color: #e67e22;
+.language-switcher button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(232, 154, 163, 1);
+    transition: opacity 0.5s ease;
+}
+
+.language-switcher button:hover::after {
+    width: 100%;
 }
 
 .hero-section {
@@ -96,16 +133,18 @@ nav a:hover {
 
 .hero-section h1 {
     font-size: 42px;
-    max-width: 60%;
+    max-width: 70%;
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
     line-height: 65px;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .hero-section span {
     font-style: italic;
+    font-weight: 200;
 }
 
 /* Criando jornadas digitais com propósito e elegância */
@@ -118,33 +157,34 @@ nav a:hover {
     border-top-right-radius: 50% 90%;
     /* More rounded right side */
     border-bottom-right-radius: 50% 90%;
-
-    animation: changeImage 4s steps(4) infinite;
+    width: 352px;
+    height: 240px;
+    animation: changeImage 5s steps(4) infinite;
     /* 4 steps for 4 images, changes every 1 second */
 }
 
-/* @keyframes changeImage {
+@keyframes changeImage {
     0% {
-        content: url("images/home-1.png");
+        content: url("images/header-1.png");
     }
 
     25% {
-        content: url("images/home-2.png");
+        content: url("images/header-2.png");
     }
 
     50% {
-        content: url("images/home-3.png");
+        content: url("images/header-3.png");
     }
 
     75% {
-        content: url("images/home-4.png");
+        content: url("images/header-4.png");
     }
 
     100% {
-        content: url("images/home-1.png");
+        content: url("images/header-1.png");
     }
 
-} */
+}
 
 .bottom-section {
     display: flex;
@@ -174,32 +214,82 @@ nav a:hover {
 }
 
 .bottom-section .text-content p {
-    padding: 20px;
+    padding: 16px;
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 24px; 
     }
 
-    header {
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    nav {
+        display: none; /* Hide nav links in responsive mode */
         flex-direction: column;
         gap: 10px;
-        position: static;
-        width: auto;
-        height: auto;
-        padding: 20px;
-        border-radius: 20px;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #ffffff;
+        box-shadow: 1px 1px 4px rgba(232, 154, 163, 0.5);
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    nav.active {
+        display: flex; /* Show nav links when active */
     }
 
     .language-switcher {
-        justify-content: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        height: 3px;
+        width: 100%;
+        background-color: #333;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Transform animations for hamburger when active */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0; /* Hide the middle line */
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .hero-section {
         flex-direction: column;
         text-align: center;
+        margin: 36px 24px;
+        padding: 0px;
     }
 
     .hero-section h1 {
@@ -207,7 +297,7 @@ nav a:hover {
     }
 
     .hero-section img {
-        max-width: 50%;
+        max-width: 100%;
         margin-top: 20px;
     }
 
@@ -218,6 +308,10 @@ nav a:hover {
     }
 
     .bottom-section .text-content {
-        text-align: center;
+        text-align: left;
+    }
+
+    .text-content p {
+        font-size: 18px;
     }
 }

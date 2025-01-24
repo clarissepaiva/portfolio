@@ -4,111 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clarisse Paiva Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
+    <title data-lang="title">Clarisse Paiva Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="font_import.css">
     <link rel="stylesheet" type="text/css" href="project_section.css">
     <link rel="stylesheet" type="text/css" href="cv_section.css">
     <link rel="stylesheet" type="text/css" href="cta_section.css">
     <link rel="stylesheet" type="text/css" href="footer_section.css">
     <link rel="stylesheet" type="text/css" href="header_section.css">
+    <script src="language_switcher.js" defer></script>
+    <script src="smooth_scrolling.js" defer></script>
+    <script src="toggle_hamburger.js" defer></script>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <img src="images\LOGO COM INICIAIS.png" alt="Logo Clarisse Paiva">
+        <!-- Hamburger menu (only visible in mobile view) -->
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
+
+        <!-- Logo in the center -->
+        <div class="logo">
+            <img src="images/LOGO COM INICIAIS.png" alt="Logo Clarisse Paiva">
+        </div>
+
+        <!-- Navigation links -->
         <nav>
-            <a href="#">PROJETOS</a>
-            <a href="#">SOBRE MIM</a>
-            <a href="#">CV</a>
-            <a href="#">CONTATO</a>
+            <a data-lang="projects" href="#projects">PROJETOS</a>
+            <a data-lang="about" href="#about">SOBRE MIM</a>
+            <a data-lang="cv" href="#cv">CV</a>
+            <a data-lang="contact" href="#contact">CONTATO</a>
         </nav>
+
+        <!-- Language switcher -->
         <div class="language-switcher">
-            <a href="#">PT</a>
-            <a href="#">EN</a>
+            <button id="pt-button">PT</button>
+            <button id="en-button">EN</button>
         </div>
     </header>
 
     <section class="hero-section">
-        <h1>CRIANDO JORNADAS <span>DIGITAIS</span> COM PROPÓSITO E ELEGÂNCIA</h1>
-        <img src="images\auto-layout.png" alt="Mockup de laptop mostrando design digital">
+        <h1 data-lang="hero-title">
+            CRIANDO JORNADAS <span>DIGITAIS</span> COM PROPÓSITO E ELEGÂNCIA
+        </h1>
+        <img src="images/header-1.png" alt="Mockup de laptop mostrando design digital">
     </section>
 
     <section class="bottom-section">
-        <img src="images\LOGO COM INICIAIS.png" alt="Clarisse Paiva Logo" class="logo-image">
+        <img src="images/LOGO COM INICIAIS.png" alt="Clarisse Paiva Logo" class="logo-image">
         <div class="text-content">
-            <p>Clarisse Paiva é uma designer de produtos digitais com MBA em Design de Interação, especializada em criar
+            <p data-lang="intro-1">
+                Clarisse Paiva é uma designer de produtos digitais com MBA em Design de Interação, especializada em
+                criar
                 experiências excepcionais por meio do UI/UX design e do desenvolvimento fluido de sites e aplicativos.
             </p>
-
-            <p>Apaixonada por conectar pessoas e marcas, sua trajetória inclui projetos como freelancer e a experiência
+            <p data-lang="intro-2">
+                Apaixonada por conectar pessoas e marcas, sua trajetória inclui projetos como freelancer e a experiência
                 de trabalhar em uma empresa americana, onde desenvolveu soluções criativas e funcionais para clientes
-                variados.</p>
-
-            <p>Combinando design estratégico, atenção aos detalhes e um foco constante no usuário, Clarisse transforma
+                variados.
+            </p>
+            <p data-lang="intro-3">
+                Combinando design estratégico, atenção aos detalhes e um foco constante no usuário, Clarisse transforma
                 ideias em experiências impactantes que aliam criatividade e funcionalidade. Para maiores detalhes sobre
-                os projetos realizados, confira os destaques na seção abaixo.</p>
+                os projetos realizados, confira os destaques na seção abaixo.
+            </p>
         </div>
     </section>
 
-
     <!-- PROJECTS -->
-    <div class="projects">
+    <div id="projects" class="projects">
         <div class="appearing-text">
-            <h1>Projetos em Destaque</h1>
+            <h1 data-lang="projects-title"><span>Projetos</span> em Destaque</h1>
         </div>
         <div class="cards">
             <div class="column">
-                <div class="card-project">
-                    <div class="project-image" style="background-image: url('images/home-1.png');"></div>
+                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2100&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                    <div class="project-image" style="background-image: url('images/home-1.png');">
+                    </div>
                     <div class="text">
-                        <h2 class="title">Design para um Festival Inesquecível</h2>
-                        <p class="description">UI/UX Design</p>
+                        <h2 class="title" data-lang="project-1-title">Design para um Festival Inesquecível</h2>
+                        <p class="description" data-lang="project-1-description">UI/UX Design</p>
                     </div>
                 </div>
-                <div class="card-project">
+
+                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2834&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
                     <div class="project-image" style="background-image: url('images/home-2.png');"></div>
                     <div class="text">
-                        <h2 class="title">Transformando Habilidades em Experiências Visuais</h2>
-                        <p class="description">UI/UX Design</p>
+                        <h2 class="title" data-lang="project-2-title">Transformando Habilidades em Experiências Visuais
+                        </h2>
+                        <p class="description" data-lang="project-2-description">UI/UX Design</p>
                     </div>
                 </div>
-                <div class="card-project">
+
+                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-3123&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
                     <div class="project-image" style="background-image: url('images/home-3.png');"></div>
                     <div class="text">
-                        <h2 class="title">Design System: Consistência e Eficiência</h2>
-                        <p class="description">UI/UX Design</p>
+                        <h2 class="title" data-lang="project-3-title">Design System: Consistência e Eficiência</h2>
+                        <p class="description" data-lang="project-3-description">UI/UX Design</p>
                     </div>
                 </div>
-                <div class="card-project">
+
+                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=147-675&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
                     <div class="project-image" style="background-image: url('images/home-4.png');"></div>
                     <div class="text">
-                        <h2 class="title">Anúncios que Conectam Negócios e Clientes</h2>
-                        <p class="description">Anúncios</p>
+                        <h2 class="title" data-lang="project-4-title">Anúncios que Conectam Negócios e Clientes</h2>
+                        <p class="description" data-lang="project-4-description">Anúncios</p>
                     </div>
                 </div>
             </div>
+
             <div class="column">
-                <div class="card-project">
+                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2577&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
                     <div class="project-image" style="background-image: url('images/home-5.png');"></div>
                     <div class="text">
-                        <h2 class="title">Praticidade e Saúde na Palma da Sua Mão</h2>
-                        <p class="description">UI/UX Design</p>
+                        <h2 class="title" data-lang="project-5-title">Praticidade e Saúde na Palma da Sua Mão</h2>
+                        <p class="description" data-lang="project-5-description">UI/UX Design</p>
                     </div>
                 </div>
-                <div class="card-project">
+
+                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2729&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
                     <div class="project-image" style="background-image: url('images/home-6.png');"></div>
                     <div class="text">
-                        <h2 class="title">Templates Design Versátil para Websites Modernos</h2>
-                        <p class="description">UI/UX Design</p>
+                        <h2 class="title" data-lang="project-6-title">Templates Design Versátil para Websites Modernos
+                        </h2>
+                        <p class="description" data-lang="project-6-description">UI/UX Design</p>
                     </div>
                 </div>
-                <div class="card-project">
+
+                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2787&viewport=-3343%2C-4183%2C0.3&t=DOCtFAsRtMkeavUb-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
                     <div class="project-image" style="background-image: url('images/home-7.png');"></div>
                     <div class="text">
-                        <h2 class="title">Empoderando Pequenos Empresários</h2>
-                        <p class="description">UI/UX Design</p>
+                        <h2 class="title" data-lang="project-7-title">Empoderando Pequenos Empresários</h2>
+                        <p class="description" data-lang="project-7-description">UI/UX Design</p>
                     </div>
                 </div>
             </div>
@@ -116,20 +145,21 @@
     </div>
 
     <!-- CV SECTION -->
-    <section class="cv-section">
+    <section id="about" class="cv-section">
         <div class="cv">
             <div class="cv-content">
                 <div class="cv-text">
-                    <div class="curriculum">CURRICULUM</div>
-                    <h3>Minha Jornada Profissional: Experiência, Habilidades e dedicação pelo Design</h3>
-                    <p>
+                    <div class="curriculum" data-lang="cv-header">CURRICULUM</div>
+                    <h3 data-lang="cv-title">Minha Jornada Profissional: Experiência, Habilidades e dedicação pelo
+                        Design</h3>
+                    <p data-lang="cv-description">
                         Explore minha trajetória profissional, destacando experiências enriquecedoras,
                         habilidades técnicas e criativas, e minha dedicação em transformar ideias em
                         soluções visuais impactantes no universo do design UI/UX.
                     </p>
                 </div>
                 <div class="icons">
-                    <div class="vector">
+                    <div class="vector" onclick="downloadPDF()">
                         <svg width="128" height="59" viewBox="0 0 128 59" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M99 4.9707L124 29.9707M124 29.9707L99 54.9707M124 29.9707H4" stroke="#383838"
@@ -143,32 +173,32 @@
 
     <!-- CTA SECTION -->
 
-    <section class="cta-section">
+    <section id="cv" class="cta-section">
         <div class="cta-content">
             <div class="cta-text">
-                <h3>PRONTO PARA TRANSFORMAR IDEIAS EM REALIDADE?</h3>
-                <p>
+                <h3 data-lang="cta-title">PRONTO PARA TRANSFORMAR IDEIAS EM REALIDADE?</h3>
+                <p data-lang="cta-description">
                     Converse sobre seu projeto e descubra como podemos transformar suas ideias em
                     experiências memoráveis.
                 </p>
             </div>
             <div class="cta-contato">
-                <div class="cta-contact-header">ENTRE EM CONTATO</div>
+                <div class="cta-contact-header" data-lang="cta-contact">ENTRE EM CONTATO</div>
                 <div class="cta-links">
                     <div class="cta-linkedin">
-                        <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                        <a href="https://www.linkedin.com/in/clarisse-a-paiva/" target="_blank">
                             <img src="images/linkedin.svg" alt="LinkedIn" class="cta-icon" />
                         </a>
                     </div>
                     <!-- Email Icon -->
                     <div class="cta-email">
-                        <a href="mailto:your-email@example.com" target="_blank">
+                        <a href="mailto:clarisseapaiva@gmail.com" target="_blank">
                             <img src="images/email.svg" alt="Email" class="cta-icon" />
                         </a>
                     </div>
                     <!-- WhatsApp Icon -->
                     <div class="cta-whatsapp">
-                        <a href="https://wa.me/1234567890" target="_blank">
+                        <a href="https://wa.me/5561981838678" target="_blank">
                             <img src="images/wpp.svg" alt="WhatsApp" class="cta-icon" />
                         </a>
                     </div>
@@ -178,7 +208,7 @@
     </section>
 
     <!-- FOOTER  -->
-    <section class="footer-section">
+    <section id="contact" class="footer-section">
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-info">
@@ -187,32 +217,32 @@
                             <!-- Replace with actual logo or initials -->
                             <img src="images\LOGO COM INICIAIS.png" alt="Logo Clarisse Paiva" class="footer-logo-image">
                         </div>
-                        <div class="footer-name">CLARISSE PAIVA</div>
+                        <div class="footer-name" data-lang="footer-name">CLARISSE PAIVA</div>
                     </div>
-                    <p class="footer-description">
+                    <p class="footer-description" data-lang="footer-description">
                         Uma UX/UI Designer qualificada, apaixonada por criar experiências centradas no usuário que
                         conectam
                         design, tecnologia e estratégia.
                     </p>
                 </div>
                 <div class="footer-contact">
-                    <div class="footer-contact-header">ENTRE EM CONTATO</div>
+                    <div class="footer-contact-header" data-lang="footer-contact">ENTRE EM CONTATO</div>
                     <div class="footer-links">
                         <!-- LinkedIn Icon -->
                         <div class="footer-linkedin">
-                            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                            <a href="https://www.linkedin.com/in/clarisse-a-paiva/" target="_blank">
                                 <img src="images/linkedin.svg" alt="LinkedIn" class="footer-icon" />
                             </a>
                         </div>
                         <!-- Email Icon -->
                         <div class="footer-email">
-                            <a href="mailto:your-email@example.com" target="_blank">
+                            <a href="mailto:clarisseapaiva@gmail.com" target="_blank">
                                 <img src="images/email.svg" alt="Email" class="footer-icon" />
                             </a>
                         </div>
                         <!-- WhatsApp Icon -->
                         <div class="footer-whatsapp">
-                            <a href="https://wa.me/1234567890" target="_blank">
+                            <a href="https://wa.me/5561981838678" target="_blank">
                                 <img src="images/wpp.svg" alt="WhatsApp" class="footer-icon" />
                             </a>
                         </div>
