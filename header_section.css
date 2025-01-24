@@ -53,7 +53,8 @@ nav {
     justify-content: center;
     gap: 30px;
     font-family: 'Satoshi', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    font-style: normal;
     font-weight: 500;
 }
 
@@ -96,8 +97,9 @@ nav a:hover::after {
     transition: color 0.3s;
     border: none;
     background-color: transparent;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'Satoshi', sans-serif;
     cursor: pointer;
     padding: 5px 0px 5px;
     margin: 0 5px;

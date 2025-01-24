@@ -1,0 +1,37 @@
+/* Style for the Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    width: 50px;
+    height: 50px;
+    background-color: #f8b6c3; /* Pink background color */
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it stays on top */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show the button when visible */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Optional hover effect */
+.back-to-top:hover {
+    background-color: #e095a5; /* Slightly darker pink on hover */
+}
+
+/* Arrow icon styling */
+.back-to-top img {
+    width: 20px;
+    height: 20px;
+}
