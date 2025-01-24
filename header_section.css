@@ -147,7 +147,23 @@ nav a:hover::after {
     font-weight: 200;
 }
 
+/* Delay for specific elements */
+h1.animate-up {
+    animation-delay: 0.2s;
+}
+
+img.animate-up {
+    animation-delay: 0.4s;
+}
+
 /* Criando jornadas digitais com propósito e elegância */
+
+.animate-up {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 2s ease-out forwards;
+}
 
 .hero-section img {
     max-width: 30%;
@@ -159,8 +175,29 @@ nav a:hover::after {
     border-bottom-right-radius: 50% 90%;
     width: 352px;
     height: 240px;
-    animation: changeImage 5s steps(4) infinite;
+    animation: fadeIn 2s ease-out forwards, changeImage 5s steps(5) infinite;
     /* 4 steps for 4 images, changes every 1 second */
+}
+
+/* Keyframes for the slide-up effect */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes changeImage {
