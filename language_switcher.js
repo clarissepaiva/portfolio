@@ -112,3 +112,29 @@ function downloadPDF() {
   link.download = "CV Clarisse Paiva UX UI Designer.pdf"; // The name for the downloaded file
   link.click(); // Programmatically click the link to trigger the download
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the current URL query params
+  const params = new URLSearchParams(window.location.search);
+  // If ?lang=en is found, set the language to English right away
+  if (params.get('lang') === 'en') {
+    switchLanguage('en');
+  } else {
+    // or you can default to Portuguese, or detect browser language
+    switchLanguage('pt');
+  }
+});
+
+// JavaScript
+document.getElementById('en-button').addEventListener('click', () => {
+  // Remove any existing query parameters first (optional)
+  const baseUrl = window.location.href.split('?')[0];
+
+  // Redirect to the same page but with ?lang=en
+  window.location.href = `${baseUrl}?lang=en`;
+});
+
+document.getElementById('pt-button').addEventListener('click', () => {
+  const baseUrl = window.location.href.split('?')[0];
+  window.location.href = `${baseUrl}?lang=pt`;
+});

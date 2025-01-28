@@ -177,7 +177,8 @@ img.animate-up {
     border-bottom-right-radius: 50% 90%;
     width: 352px;
     height: 240px;
-    animation: fadeInDelay 1.5s ease-in-out forwards, changeImage 5s steps(5) infinite;
+    opacity: 0;
+    animation: fadeSlideshow 10s ease-in-out 1s infinite;
     /* 4 steps for 4 images, changes every 1 second */
 }
 
@@ -200,10 +201,90 @@ img.animate-up {
     }
 }
 
+@keyframes fadeSlideshow {
+    /* IMAGE 1: displayed from 0% to 20% */
+    0% {
+        opacity: 0;
+      }
+    10% {
+      content: url("images/header-1.png");
+      opacity: 1;
+    }
+    20% {
+      content: url("images/header-1.png");
+      opacity: 1;
+    }
+    /* Fade out old image 20% -> 25% */
+    25% {
+      content: url("images/header-1.png");
+      opacity: 0;
+    }
+    /* Switch to image 2 at 26%, keep invisible */
+    26% {
+      content: url("images/header-2.png");
+      opacity: 0;
+    }
+    /* Fade in new image 26% -> 30% */
+    30% {
+      content: url("images/header-2.png");
+      opacity: 1;
+    }
+    /* Remain visible until 45% */
+    45% {
+      content: url("images/header-2.png");
+      opacity: 1;
+    }
+  
+    /* Fade out 45% -> 50% */
+    50% {
+      content: url("images/header-2.png");
+      opacity: 0;
+    }
+    /* Switch to image 3 at 51%, invisible */
+    51% {
+      content: url("images/header-3.png");
+      opacity: 0;
+    }
+    /* Fade in 51% -> 55% */
+    55% {
+      content: url("images/header-3.png");
+      opacity: 1;
+    }
+    70% {
+      content: url("images/header-3.png");
+      opacity: 1;
+    }
+  
+    /* Fade out 70% -> 75% */
+    75% {
+      content: url("images/header-3.png");
+      opacity: 0;
+    }
+    /* Switch to image 4 at 76%, invisible */
+    76% {
+      content: url("images/header-4.png");
+      opacity: 0;
+    }
+    /* Fade in 76% -> 80% */
+    80% {
+      content: url("images/header-4.png");
+      opacity: 1;
+    }
+    95% {
+      content: url("images/header-4.png");
+      opacity: 1;
+    }
+    /* Fade out at 100% to loop back to first image at 0% */
+    100% {
+      content: url("images/header-4.png");
+      opacity: 0;
+    }
+  }
+
 @keyframes slideUp {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(200px);
     }
     100% {
         opacity: 1;
