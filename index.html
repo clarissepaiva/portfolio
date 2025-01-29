@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="title">Clarisse Paiva Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images\LOGO COM INICIAIS.png" />
     <link rel="stylesheet" type="text/css" href="font_import.css">
     <link rel="stylesheet" type="text/css" href="project_section.css">
     <link rel="stylesheet" type="text/css" href="cv_section.css">
@@ -21,9 +22,10 @@
 <body>
     <button id="backToTop" class="back-to-top">
         <svg width="15" height="18" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.3334 21L10.0001 12.6667L1.66675 21M18.3334 9.33333L10.0001 1L1.66675 9.33333" stroke="#383838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            
+            <path d="M18.3334 21L10.0001 12.6667L1.66675 21M18.3334 9.33333L10.0001 1L1.66675 9.33333" stroke="#383838"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
     </button>
 
     <header>
@@ -41,6 +43,12 @@
 
         <!-- Navigation links -->
         <nav>
+                <!-- Top row: logo at left, X button at right -->
+            <div class="nav-header">
+                <img class="nav-logo" src="images/LOGO COM INICIAIS.png" alt="Logo Clarisse Paiva">
+                <button class="close-btn">&times;</button>
+            </div>
+
             <a data-lang="projects" href="#projects">PROJETOS</a>
             <a data-lang="about" href="#about">SOBRE MIM</a>
             <a data-lang="cv" href="#cv">CV</a>
@@ -61,7 +69,7 @@
         <img src="images/header-1.png" alt="Mockup de laptop mostrando design digital">
     </section>
 
-    <section class="bottom-section">
+    <section id="about" class="bottom-section">
         <img src="images/LOGO COM INICIAIS.png" alt="Clarisse Paiva Logo" class="logo-image">
         <div class="text-content">
             <p data-lang="intro-1">
@@ -89,7 +97,7 @@
         </div>
         <div class="cards">
             <div class="column">
-                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2100&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                <div class="card-project" data-link-id="project1">
                     <div class="project-image" style="background-image: url('images/home-1.png');">
                     </div>
                     <div class="text">
@@ -98,7 +106,7 @@
                     </div>
                 </div>
 
-                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-3123&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                <div class="card-project" data-link-id="project2">
                     <div class="project-image" style="background-image: url('images/home-3.png');"></div>
                     <div class="text">
                         <h2 class="title" data-lang="project-2-title">Transformando Habilidades em Experiências Visuais
@@ -107,15 +115,16 @@
                     </div>
                 </div>
 
-                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2577&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                <div class="card-project" data-link-id="project3">
                     <div class="project-image" style="background-image: url('images/home-5.png');"></div>
                     <div class="text">
-                        <h2 class="title" data-lang="project-3-title">Design System: Consistência e Eficiência para Produtos Digitais</h2>
+                        <h2 class="title" data-lang="project-3-title">Design System: Consistência e Eficiência para
+                            Produtos Digitais</h2>
                         <p class="description" data-lang="project-3-description">UI/UX Design</p>
                     </div>
                 </div>
 
-                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2787&viewport=-3343%2C-4183%2C0.3&t=DOCtFAsRtMkeavUb-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                <div class="card-project" data-link-id="project4">
                     <div class="project-image" style="background-image: url('images/home-7.png');"></div>
                     <div class="text">
                         <h2 class="title" data-lang="project-4-title">Anúncios que Conectam Negócios e Clientes</h2>
@@ -125,7 +134,7 @@
             </div>
 
             <div class="column">
-                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2834&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                <div class="card-project" data-link-id="project5">
                     <div class="project-image" style="background-image: url('images/home-2.png');"></div>
                     <div class="text">
                         <h2 class="title" data-lang="project-5-title">Praticidade e Saúde na Palma da Sua Mão</h2>
@@ -133,7 +142,7 @@
                     </div>
                 </div>
 
-                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=147-675&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                <div class="card-project" data-link-id="project6">
                     <div class="project-image" style="background-image: url('images/home-4.png');"></div>
                     <div class="text">
                         <h2 class="title" data-lang="project-6-title">Templates Design Versátil para Websites Modernos
@@ -142,10 +151,11 @@
                     </div>
                 </div>
 
-                <div class="card-project" onclick="window.open('https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2729&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed', '_blank');">
+                <div class="card-project" data-link-id="project7">
                     <div class="project-image" style="background-image: url('images/home-6.png');"></div>
                     <div class="text">
-                        <h2 class="title" data-lang="project-7-title">Empoderando Pequenos Empresários com Aplicativos Sob Medida</h2>
+                        <h2 class="title" data-lang="project-7-title">Empoderando Pequenos Empresários com Aplicativos
+                            Sob Medida</h2>
                         <p class="description" data-lang="project-7-description">UI/UX Design</p>
                     </div>
                 </div>
@@ -154,7 +164,7 @@
     </div>
 
     <!-- CV SECTION -->
-    <section id="about" class="cv-section">
+    <section id="cv" class="cv-section">
         <div class="cv">
             <div class="cv-content">
                 <div class="cv-text">
@@ -182,7 +192,7 @@
 
     <!-- CTA SECTION -->
 
-    <section id="cv" class="cta-section">
+    <section id="contact" class="cta-section">
         <div class="cta-content">
             <div class="cta-text">
                 <h3 data-lang="cta-title">PRONTO PARA TRANSFORMAR IDEIAS EM REALIDADE?</h3>
@@ -217,7 +227,7 @@
     </section>
 
     <!-- FOOTER  -->
-    <section id="contact" class="footer-section">
+    <section id="" class="footer-section">
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-info">

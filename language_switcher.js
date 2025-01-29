@@ -24,9 +24,9 @@ const translations = {
     "project-4-description": "Ads",
     "project-5-title": "Practicality and Health at Your Fingertips",
     "project-5-description": "UI/UX Design",
-    "project-6-title": "Versatile Design Templates for Modern Websites",
+    "project-6-title": "Templates: Versatile Design for Modern Websites",
     "project-6-description": "UI/UX Design",
-    "project-7-title": "Empowering Small Entrepreneurs",
+    "project-7-title": "Empowering Small Entrepreneurs with Custom-Made Apps",
     "project-7-description": "UI/UX Design",
     "cv-header": "CURRICULUM",
     "cv-title": "My Professional Journey: Experience, Skills, and Dedication to Design",
@@ -83,6 +83,38 @@ const translations = {
   },
 };
 
+const figmaLinks = {
+  project1: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2100&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=24-129&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project2: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-3123&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=56-566&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project3: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2577&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=182-746&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project4: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2787&viewport=-3343%2C-4183%2C0.3&t=DOCtFAsRtMkeavUb-1&scaling=scale-down-width&content-scaling=fixed',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=291-1148&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project5: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2834&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=41-276&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project6: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=147-675&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2282&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project7: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2729&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=211-3180&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  }
+};
+
+var currentLanguage = 'pt';
 
 // Function to switch languages
 function switchLanguage(lang) {
@@ -97,20 +129,29 @@ function switchLanguage(lang) {
 
 // Add event listeners to buttons
 document.getElementById("pt-button").addEventListener("click", () => {
+  currentLanguage = "pt";
   switchLanguage("pt");
-  console.log("Teste")
 });
 
 document.getElementById("en-button").addEventListener("click", () => {
+  currentLanguage = "en";
   switchLanguage("en");
 });
 
 
 function downloadPDF() {
-  const link = document.createElement("a");
-  link.href = "pdf/CV Clarisse Paiva UX UI Designer.pdf"; // Path to your PDF file
-  link.download = "CV Clarisse Paiva UX UI Designer.pdf"; // The name for the downloaded file
-  link.click(); // Programmatically click the link to trigger the download
+  if (currentLanguage === 'en') {
+    const link = document.createElement("a");
+    link.href = "pdf/CV Clarisse Paiva UX UI Designer EN.pdf"; // Path to your PDF file
+    link.download = "CV Clarisse Paiva UX UI Designer EN.pdf"; // The name for the downloaded file
+    link.click(); // Programmatically click the link to trigger the download
+  } else {
+    // or you can default to Portuguese, or detect browser language
+    const link = document.createElement("a");
+    link.href = "pdf/CV Clarisse Paiva UX UI Designer.pdf"; // Path to your PDF file
+    link.download = "CV Clarisse Paiva UX UI Designer.pdf"; // The name for the downloaded file
+    link.click(); // Programmatically click the link to trigger the download
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -119,9 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // If ?lang=en is found, set the language to English right away
   if (params.get('lang') === 'en') {
     switchLanguage('en');
+    currentLanguage = 'en'
   } else {
     // or you can default to Portuguese, or detect browser language
     switchLanguage('pt');
+    currentLanguage = 'pt'
   }
 });
 
@@ -137,4 +180,16 @@ document.getElementById('en-button').addEventListener('click', () => {
 document.getElementById('pt-button').addEventListener('click', () => {
   const baseUrl = window.location.href.split('?')[0];
   window.location.href = `${baseUrl}?lang=pt`;
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cardProjects = document.querySelectorAll('.card-project');
+  cardProjects.forEach(card => {
+    card.addEventListener('click', () => {
+      const linkId = card.dataset.linkId;
+      const url = figmaLinks[linkId][currentLanguage];
+      window.open(url, '_blank');
+    });    
+  });
 });
