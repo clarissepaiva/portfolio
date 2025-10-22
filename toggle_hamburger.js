@@ -17,14 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.classList.remove('active');
       nav.classList.remove('active');
     }
-  
-    // 1) Toggle on hamburger click
-    // hamburger.addEventListener('click', () => {
-    //   // No stopPropagation needed
-    //   hamburger.classList.toggle('active');
-    //   nav.classList.toggle('active');
-    // });
-  
+    
     // 2) Close on close button
     if (closeBtn) {
       closeBtn.addEventListener('click', closeMenu);

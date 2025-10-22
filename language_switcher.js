@@ -28,6 +28,10 @@ const translations = {
     "project-6-description": "UI/UX Design",
     "project-7-title": "Empowering Small Entrepreneurs with Custom-Made Apps",
     "project-7-description": "UI/UX Design",
+    "project-8-title": "Transforming Learning in Roraima with Escolegis",
+    "project-8-description": "UI/UX Design",
+    "project-9-title": "AI-Powered Conversion Landing Pages",
+    "project-9-description": "UI/UX Design",
     "cv-header": "CURRICULUM",
     "cv-title": "My Professional Journey: Experience, Skills, and Dedication to Design",
     "cv-description":
@@ -68,6 +72,10 @@ const translations = {
     "project-6-description": "UI/UX Design",
     "project-7-title": "Empoderando Pequenos Empresários",
     "project-7-description": "UI/UX Design",
+    "project-8-title": "Transformando o Aprendizado em Roraima com a escolegis",
+    "project-8-description": "UI/UX Design",
+    "project-9-title": "Landing Pages de Conversão Desenvolvidas com Inteligência Artificial",
+    "project-9-description": "UI/UX Design",
     "cv-header": "CURRICULUM",
     "cv-title": "Minha Jornada Profissional: Experiência, Habilidades e dedicação pelo Design",
     "cv-description":
@@ -111,6 +119,14 @@ const figmaLinks = {
   project7: {
     en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=397-2729&viewport=-149%2C-2974%2C0.21&t=X9BDK6dxZwPMZc3a-1&scaling=scale-down-width&content-scaling=fixed',
     pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Vagas?page-id=1%3A23&node-id=211-3180&viewport=730%2C-1241%2C0.11&t=VvwAmwJQiMspPQ0j-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project8: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Portf%C3%B3lio?page-id=1%3A23&node-id=1305-5713&viewport=-2593%2C-3417%2C0.2&t=mtOZQOipgv2QS2e7-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Clarisse?page-id=1%3A23&node-id=1087-2400&viewport=-2519%2C-581%2C0.17&t=D8jxzLH2TeKmsFZw-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+  },
+  project9: {
+    en: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Portf%C3%B3lio?page-id=1%3A23&node-id=1305-4425&viewport=-2593%2C-3417%2C0.2&t=mtOZQOipgv2QS2e7-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
+    pt: 'https://www.figma.com/proto/Z6xe83oasmquh0UAXZDKCv/Clarisse?page-id=1%3A23&node-id=1033-2377&viewport=-2098%2C-470%2C0.16&t=i3bmxtsDFkfAdij8-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=356%3A1549',
   }
 };
 
@@ -148,8 +164,8 @@ function downloadPDF() {
   } else {
     // or you can default to Portuguese, or detect browser language
     const link = document.createElement("a");
-    link.href = "pdf/CV Clarisse Paiva UX UI Designer.pdf"; // Path to your PDF file
-    link.download = "CV Clarisse Paiva UX UI Designer.pdf"; // The name for the downloaded file
+    link.href = "pdf/CV Clarisse Paiva UX UI Designer PT.pdf"; // Path to your PDF file
+    link.download = "CV Clarisse Paiva UX UI Designer PT.pdf"; // The name for the downloaded file
     link.click(); // Programmatically click the link to trigger the download
   }
 }
